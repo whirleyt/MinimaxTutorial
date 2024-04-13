@@ -1,10 +1,24 @@
 .alphabeta-quiz-container {
     width: 80%;
     margin: 0 auto;
-    box-shadow: 0px 0px 10px #76c893;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+    animation-duration: 1s;
+    animation-name: border-fade;
+}
+
+@keyframes border-fade {
+    0% {
+        box-shadow: 0px 0px 10px #76c893;
+    }
+    50% {
+        box-shadow: 0px 0px 10px #76c893;
+    }
+    100% {
+        box-shadow: 0px 0px 10px black;
+    }
 }
 
 .center {
@@ -25,4 +39,169 @@
     color: #0077b6;
     font-size: 10px;
     font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.triangle-container {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    filter: drop-shadow(0px 0px 3px black);
+    transform: rotate(45deg);
+    animation-duration: 1s;
+    animation-name: triangle-border-fade;
+}
+
+.triangle {
+    border-left: 32.5px solid transparent;
+    border-right: 32.5px solid transparent;
+    border-bottom: 60px solid #76c893;
+    transform: rotate(-45deg);
+}
+
+.upsidedown-triangle-container {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    filter: drop-shadow(0px 0px 3px black);
+    transform: rotate(-45deg);
+    animation-duration: 1s;
+    animation-name: upsidedown-triangle-border-fade;
+}
+
+.upsidedown-triangle {
+    border-left: 32.5px solid transparent;
+    border-right: 32.5px solid transparent;
+    border-top: 60px solid #0077b6;
+    transform: rotate(45deg);
+}
+
+.square-container {
+    filter: drop-shadow(0px 0px 3px black);
+    animation-duration: 1s;
+    animation-name: square-border-fade;
+    margin-left: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.square {
+    width: 25px;
+    height: 25px;
+    background-color: #ffacc5;
+}
+
+@keyframes triangle-border-fade {
+    0% {
+        filter: drop-shadow(0px 0px 4px #76c893);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 4px #76c893);
+    }
+    100% {
+       filter: drop-shadow(0px 0px 3px black);
+    }
+}
+
+@keyframes upsidedown-triangle-border-fade {
+    0% {
+        filter: drop-shadow(0px 0px 4px #0077b6);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 4px #0077b6);
+    }
+    100% {
+       filter: drop-shadow(0px 0px 3px black);
+    }
+}
+
+@keyframes square-border-fade {
+    0% {
+        filter: drop-shadow(0px 0px 4px #ffacc5);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 4px #ffacc5);
+    }
+    100% {
+       filter: drop-shadow(0px 0px 3px black);
+    }
+}
+
+
+.row2-right-branch-container, .row2-left-branch-container, .row1-left-branch-container, .row1-right-branch-container {
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 100px;
+}
+
+.row3 {
+    display: inline-block;
+}
+
+.tree-edge {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 50px;
+    background-color: white;
+    filter: drop-shadow(0px 0px 3px black);
+    animation-duration: 1s;
+    animation-name: edge-fade;
+}
+
+@keyframes edge-fade {
+    0% {
+        filter: drop-shadow(0px 0px 3px grey);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 3px grey);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 3px black);
+    }
+}
+
+.edge {
+    position: relative;
+}
+
+.custom-edge-left-1 {
+    transform: rotate(52deg);
+    transform-origin: bottom left;
+    margin-left: 30px;
+    height: 163px;
+}
+
+.custom-edge-right-1 {
+    transform: rotate(-52deg);
+    transform-origin: bottom right;
+    margin-left: -30px;
+    height: 163px;
+}
+
+.custom-edge-left-2 {
+    transform: rotate(36deg);
+    transform-origin: bottom left;
+    height: 128px;
+}
+
+.custom-edge-right-2 {
+    transform: rotate(-35.5deg);
+    transform-origin: bottom right;
+    height: 128px;
+}
+
+.tree-edge-center {
+    transform: rotate(180deg);
+    transform-origin: bottom;
+    height: 30px;
+}
+
+.resultsText {
+    font-size: 20px;
+    font-weight: bold;
+    color: #76c893;
 }
