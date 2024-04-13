@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+<p>Lessons and Challenges</p>
+
+<div class="home-container">
+    <div class="center">
+
+        <h5>When Minimax Makes the Move</h5>
+        <img class="minimax-tree" src="{{ url_for('static', filename='images/home-minimax-tree.png') }}" alt="Minimax Tree">
+
+        <h6>Optimal for Zero-Sum Games</h6>
+        <p class="info">Minimax is best suited for environments like chess, poker, and tic-tac-toe, where one player's gain is directly another's loss, making it ideal for competitive scenarios.</p>
+
+        <div class="icons">
+            <img class="poker" src="{{ url_for('static', filename='images/home-poker.png') }}" alt="Poker Icon">
+            <img class="chess" src="{{ url_for('static', filename='images/home-chess.png') }}" alt="Chess Icon">
+        </div>
+
+        <h6>Crucial in Perfect Information Settings</h6>
+        <p class="info">The algorithm thrives where all players are fully aware of the game's state, ensuring decisions and strategies are based on complete knowledge, thus favored in deterministic games without the element of chance.</p>
+
+        <h6>Strategic for AI Development</h6>
+        <p class="info">Minimax is key in developing competitive AI by allowing it to think ahead and simulate potential moves by the opponent, essential in games with finite strategies and outcomes for crafting advanced, strategic AI opponents.</p>
+        <a href="/minimaxBasics">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#0077b6" class="bi bi-arrow-right-circle next-icon" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
+        </a>
+        <h6 class="icon-description">Start Tutorial</h6>
+    </div>
+</div>
+
+{% endblock %}

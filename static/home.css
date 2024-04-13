@@ -1,0 +1,57 @@
+.home-container {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px #76c893;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+h5 {
+    padding-top: 10px;
+}
+
+h6 {
+    font-weight: bold;
+    margin-bottom: -1px;
+    font-size: 15px;
+}
+
+.minimax-tree {
+    width: 450px;
+    padding-bottom: 20px;
+}
+
+.center {
+    text-align: center;
+    width: 78%;
+    margin: 0 auto;
+}
+
+.poker {
+    width: 100px;
+    margin-top: -5px;
+}
+
+.chess {
+    width: 110px;
+}
+
+.info {
+    font-size: 13.5px;
+}
+
+.icons {
+    margin-top: -15px;
+    padding-top: -15px;
+}
+
+.next-icon:hover {
+    fill: #76c893;
+}
+
+.icon-description {
+    padding-top: 4px;
+    color: #0077b6;
+    font-size: 10px;
+}

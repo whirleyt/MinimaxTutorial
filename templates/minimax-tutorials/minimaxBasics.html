@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='minimax-tutorials/minimaxBasics.css')}}">
+
+<p>Introduction to The Minimax Algorithm</p>
+
+<div class="basics-container">
+    <div class="center">
+
+        <h6>Suppose we have a 2 player, zero-sum game</h6>
+        <p class="info">One player wants to maximize, the other player wants to minimize</p>
+        <img class="minimax-tree" src="{{ url_for('static', filename='images/basics-minimax-tree.png') }}" alt="Basic Minimax Tree">
+
+        <h6 class="custom-h6">
+            <b>Minimax values</b>
+            <span class="grey">The optimal score that can be achieved at a particular game state, assuming both players always make the best possible moves</span>
+        </h6>
+
+        <a href="/alphabetaIntro">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#0077b6" class="bi bi-arrow-right-circle next-icon" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
+        </a>
+        <h6 class="icon-description">Alpha-beta Pruning</h6>
+
+    </div>
+</div>
+
+{% endblock %}>

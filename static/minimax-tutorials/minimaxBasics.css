@@ -1,0 +1,52 @@
+.basics-container {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px #76c893;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.minimax-tree {
+    width: 800px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.center {
+    text-align: center;
+}
+
+h6 {
+    margin-bottom: -1px;
+    font-size: 15px;
+}
+
+.custom-h6 {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.info {
+    font-size: 11px;
+    color: black;
+}
+
+.grey {
+    color: grey;
+}
+
+.next-icon {
+    margin-top: 20px;
+}
+
+.next-icon:hover {
+    fill: #76c893;
+}
+
+.icon-description {
+    padding-top: 4px;
+    color: #0077b6;
+    font-size: 10px;
+    font-weight: bold;
+}

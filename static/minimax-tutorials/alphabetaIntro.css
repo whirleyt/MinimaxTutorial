@@ -1,0 +1,65 @@
+.intro-alphabeta-container {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px #76c893;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.game-tree {
+    width: 350px;
+    margin: 15px;
+}
+
+.minimax-tree {
+    width: 500px;
+    margin: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+h6 {
+    font-size: 15px;
+    padding: 10px;
+}
+
+h5 {
+    font-size: 10px;
+}
+
+.remove-space {
+    margin-bottom: -10px;
+}
+
+.next-icon {
+    margin-top: 10px;
+}
+
+.next-icon:hover {
+    fill: #76c893;
+}
+
+.icon-description {
+    padding-top: 4px;
+    color: #0077b6;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: -15px;
+}
+
+.bold {
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+
+.custom-h5 {
+    font-size: 10.5px;
+}
+
+.info {
+    font-size: 8px;
+    margin-top: -20px;
+}
