@@ -6,8 +6,54 @@
 <p>Alpha-beta Pruning</p>
 
 <div class="alphabeta-main-container">
-    <div class="center">
+    <div>
+        <div class="alpha">
+            <img class="alpha-symbol" src="{{ url_for('static', filename='images/alpha.png') }}" alt="Alpha Symbol">
+            <p class="symbol-description">Highest value seen so far</p>
+        </div>
+        <div class="beta">
+            <img class="beta-symbol" src="{{ url_for('static', filename='images/beta.png') }}" alt="Beta Symbol">
+            <p class="symbol-description">Lowest value seen so far</p>
+        </div>
+        <div class="description">
+            <h6 class="alpha-beta-info"><b>Definition</b> The highest and lowest values seen along the path to that node <br>
+            Alpha beta is only passed down; Terminal values go up</h6>
+        </div>
+    </div>
 
+    <div class="right-side">
+        <div class="minimax-code">
+        <pre>
+            <code class="highlighted-code">
+                function minimax(node, depth, alpha, beta, maximizingPlayer):
+                    if depth = 0 or node is a terminal node:
+                        return the heuristic value of node
+                    if maximizingPlayer:
+                        maxEval = -infinity
+                        for each child of node:
+                            val = minimax(child, depth - 1, alpha, beta, False)
+                            bestVal = max(bestVal, val)
+                            alpha = max(alpha, eval)
+                            if beta ≤ alpha:
+                                break
+                                return bestVal
+                    else:
+                        minEval = +infinity
+                        for each child of node:
+                            val = minimax(child, depth - 1, alpha, beta, True)
+                            bestVal = min(bestVal, val)
+                            beta = min(beta, eval)
+                            if beta ≤ alpha:
+                                break
+                                return bestVal
+
+                result = minimax(initialNode, maxDepth, -infinity, +infinity, True)
+            </code>
+        </pre>
+    </div>
+    </div>
+    <div class="center">
+        <div id="content"></div>
         <div class="minimax-tree-html">
             <div class="row0-root-container">
                 <div class="triangle-container"><div class="root triangle"></div></div>
@@ -49,16 +95,23 @@
                         <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square"></div></div></div>
                     </div>
                 </div>
-
             </div>
         </div>
-
-        <a href="/minimaxBasicsQuiz">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#0077b6" class="bi bi-arrow-right-circle next-icon" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-            </svg>
-        </a>
-        <h6 class="icon-description">Quiz</h6>
+        <div class="navigation">
+            <img id="previous" class="previous" src="{{ url_for('static', filename='images/prev.png') }}" alt="Previous Navigation">
+            <img id="next" class="next" src="{{ url_for('static', filename='images/next.png') }}" alt="Next Navigation">
+            <a href="/alphabetaMain" id="restart-btn">
+                <img id="restart" class="restart" src="{{ url_for('static', filename='images/restart.png') }}" alt="Restart Navigation">
+            </a>
+        </div>
+        <div id="quiz">
+            <a href="/minimaxBasicsQuiz">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#0077b6" class="bi bi-arrow-right-circle next-icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+            </a>
+            <h6 class="icon-description">Quiz</h6>
+        </div>
     </div>
 </div>
 

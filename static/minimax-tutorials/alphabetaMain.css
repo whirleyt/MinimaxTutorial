@@ -1,5 +1,5 @@
 .alphabeta-main-container {
-    width: 80%;
+    width: 87%;
     margin: 0 auto;
     padding: 20px;
     margin-bottom: 20px;
@@ -26,7 +26,7 @@
 }
 
 .next-icon {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .next-icon:hover {
@@ -200,8 +200,63 @@
     height: 30px;
 }
 
+.alpha-symbol {
+    width: 23px;
+    display: inline;
+}
+
+.beta-symbol {
+    width: 22px;
+    display: inline;
+}
+
+.symbol-description {
+    display: inline;
+    font-size: 12px;
+}
+
+.description {
+    padding-top: 15px;
+}
+
+.alpha-beta-info {
+    font-size: 10px;
+}
+
+.minimax-code {
+    font-size: 8.5px;
+}
+
+.right-side {
+    margin-left: 60%;
+    margin-top: -122px;
+    margin-bottom: -170px;
+}
+
+#quiz {
+    display: none;
+    margin-top: -50px;
+    padding-top: -50px;
+}
 
 
+#previous {
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
 
+#next {
+    width: 30px;
+    cursor: pointer;
+    display: inline;
+}
 
+.navigation {
+    margin-top: -10px;
+}
 
+#restart {
+    width: 28px;
+    display: none;
+}
