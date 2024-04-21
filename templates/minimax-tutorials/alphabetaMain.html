@@ -3,7 +3,7 @@
 {% block content %}
 <link rel="stylesheet" href="{{url_for('static', filename='minimax-tutorials/alphabetaMain.css')}}">
 
-<p>Alpha-beta Pruning</p>
+<p class="subtitle">Alpha-beta Pruning</p>
 
 <div class="alphabeta-main-container">
     <div>
@@ -24,36 +24,38 @@
     <div class="right-side">
         <div class="minimax-code">
         <pre>
-            <code class="highlighted-code">
-                function minimax(node, depth, alpha, beta, maximizingPlayer):
-                    if depth = 0 or node is a terminal node:
-                        return the heuristic value of node
-                    if maximizingPlayer:
-                        maxEval = -infinity
-                        for each child of node:
-                            val = minimax(child, depth - 1, alpha, beta, False)
-                            bestVal = max(bestVal, val)
-                            alpha = max(alpha, eval)
-                            if beta ≤ alpha:
-                                break
-                                return bestVal
-                    else:
-                        minEval = +infinity
-                        for each child of node:
-                            val = minimax(child, depth - 1, alpha, beta, True)
-                            bestVal = min(bestVal, val)
-                            beta = min(beta, eval)
-                            if beta ≤ alpha:
-                                break
-                                return bestVal
+            <code>
+                <span id="line-1" class="code-container">function minimax(node, depth, alpha, beta, maximizingPlayer):</span>
+                    <span id="line-2" class="code-container">if depth = 0 or node is a terminal node:</span>
+                        <span id="line-3" class="code-container">return the value of the node</span>
+                    <span id="line-4" class="code-container">if isMaximizingPlayer:</span>
+                        <span id="line-5" class="code-container">bestValue = -infinity</span>
+                        <span id="line-6" class="code-container">for each child of node:</span>
+                            <span id="line-7" class="code-container">val = minimax(child, depth - 1, alpha, beta, False)</span>
+                            <span id="line-8" class="code-container">bestValue = max(bestValue, val)</span>
+                            <span id="line-9" class="code-container">alpha = max(alpha, val)</span>
+                            <span id="line-10" class="code-container">if beta ≤ alpha:</span>
+                                <span id="line-11" class="code-container">break</span>
+                        <span id="line-12" class="code-container">return bestValue</span>
+                    <span id="line-13" class="code-container">else:</span>
+                        <span id="line-14" class="code-container">bestValue = +infinity</span>
+                        <span id="line-15" class="code-container">for each child of node:</span>
+                            <span id="line-16" class="code-container">val = minimax(child, depth - 1, alpha, beta, True)</span>
+                            <span id="line-17" class="code-container">bestValue = min(bestValue, val)</span>
+                            <span id="line-18" class="code-container">beta = min(beta, val)</span>
+                            <span id="line-19" class="code-container">if beta ≤ alpha:</span>
+                                <span id="line-20" class="code-container">break</span>
+                        <span id="line-21" class="code-container">return bestValue</span>
 
-                result = minimax(initialNode, maxDepth, -infinity, +infinity, True)
+                <span id="line-22" class="code-container">result = minimax(root, depth, -infinity, +infinity, True)</span>
             </code>
         </pre>
     </div>
+        <div class="custom-code-border"></div>
     </div>
     <div class="center">
-        <div id="content"></div>
+        <div id="alpha-beta-info-container"></div>
+        <div id="description-container"></div>
         <div class="minimax-tree-html">
             <div class="row0-root-container">
                 <div class="triangle-container"><div class="root triangle"></div></div>
@@ -65,15 +67,15 @@
                     <div class="row2-left-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-left custom-edge-left-2"></div></div>
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square"></div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square"></div></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">10</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">6</div></div></div>
                     </div>
 
                     <div class="row2-right-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-2"></div></div>
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square"></div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square"></div></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">100</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center" id="prune-edge-1"></div></div><div class="square-container" id="prune-node-1"><div class="square">8</div></div></div>
                     </div>
                 </div>
 
@@ -84,15 +86,15 @@
                     <div class="row2-left-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-left custom-edge-left-2"></div></div>
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square"></div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square"></div></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">1</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">2</div></div></div>
                     </div>
 
                     <div class="row2-right-branch-container">
-                        <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-2"></div></div>
-                        <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square"></div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square"></div></div></div>
+                        <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-2" id="prune-edge-2"></div></div>
+                        <div class="triangle-container" id="prune-node-2"><div class="row2 triangle"></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center" id="prune-edge-3"></div></div><div class="square-container" id="prune-node-3"><div class="square">20</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center" id="prune-edge-4"></div></div><div class="square-container" id="prune-node-4"><div class="square">4</div></div></div>
                     </div>
                 </div>
             </div>
@@ -100,6 +102,8 @@
         <div class="navigation">
             <img id="previous" class="previous" src="{{ url_for('static', filename='images/prev.png') }}" alt="Previous Navigation">
             <img id="next" class="next" src="{{ url_for('static', filename='images/next.png') }}" alt="Next Navigation">
+            <img id="pointer-1" class="pointer" src="{{ url_for('static', filename='images/pointer.png') }}" alt="Navigation Pointer">
+            <p id="pointer-1-info" class="pointer-1-info">Navigate through the Alpha-beta Pruning Tutorial</p>
             <a href="/alphabetaMain" id="restart-btn">
                 <img id="restart" class="restart" src="{{ url_for('static', filename='images/restart.png') }}" alt="Restart Navigation">
             </a>

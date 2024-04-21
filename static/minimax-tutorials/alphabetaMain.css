@@ -23,6 +23,7 @@
 
 .center {
     text-align: center;
+    position: relative;
 }
 
 .next-icon {
@@ -88,6 +89,9 @@
     width: 25px;
     height: 25px;
     background-color: #ffacc5;
+    font-size: 13px;
+    padding-top: 3px;
+    font-weight: bold;
 }
 
 @keyframes triangle-border-fade {
@@ -116,13 +120,16 @@
 
 @keyframes square-border-fade {
     0% {
+        color: white;
         filter: drop-shadow(0px 0px 4px #ffacc5);
     }
     50% {
+        color: white;
         filter: drop-shadow(0px 0px 4px #ffacc5);
     }
     100% {
-       filter: drop-shadow(0px 0px 3px black);
+        color: black;
+        filter: drop-shadow(0px 0px 3px black);
     }
 }
 
@@ -220,23 +227,31 @@
 }
 
 .alpha-beta-info {
-    font-size: 10px;
+    font-size: 11px;
+    color: grey;
 }
 
 .minimax-code {
-    font-size: 8.5px;
+    font-size: 9.75px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -17px;
+    color: grey;
+}
+
+.highlighted-code {
+    color: grey;
 }
 
 .right-side {
-    margin-left: 60%;
-    margin-top: -122px;
+    margin-left: 58%;
+    margin-top: -130px;
     margin-bottom: -170px;
+    position: relative;
 }
 
 #quiz {
     display: none;
-    margin-top: -50px;
-    padding-top: -50px;
 }
 
 
@@ -259,4 +274,153 @@
 #restart {
     width: 28px;
     display: none;
+    margin-top: -20px;
+}
+
+.custom-code-border {
+  position: relative;
+  width: 318px;
+  height: 290px;
+  margin-left: 82px;
+  margin-top: 32px;
+}
+
+.custom-code-border::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-bottom: 3px solid #D3D3D3;
+  border-left: 3px solid #D3D3D3;
+  border-bottom-left-radius: 15px;
+  z-index: -1;
+}
+
+.navigation {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    margin-bottom: -10px;
+}
+
+#previous, #next, #restart, #pointer-1, #pointer-1-info {
+    position: absolute;
+}
+
+#previous { left: 355px; }
+#next { left: 548px; }
+#restart { left: 449px; }
+#pointer-1 {
+    left: 585px;
+    bottom: 1px;
+    animation: float .75s ease-in-out infinite;
+    display: block;
+    transform: rotate(30deg);
+}
+
+#pointer-1-info {
+    left: 620px;
+    top: 3px;
+    width: 300px;
+    font-size: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+.pointer {
+    width: 65px;
+}
+
+.a-symbol, .b-symbol {
+    width: 15px;
+    margin-right: -4px;
+}
+
+.a-symbol-q, .b-symbol-q {
+    width: 23.5px;
+    margin-bottom: 3px;
+}
+
+.b-symbol-q {
+}
+
+.a-symbol-q {
+
+}
+
+
+#alpha-beta-info-container, #description-container {
+    position: absolute;
+}
+
+.minimax-tree-html {
+    position: relative;
+    margin-top: 40px;
+}
+
+.alpha-beta-page-info {
+    color: black;
+    position: absolute;
+    width: 200px;
+    font-size: 13px;
+}
+
+#description-container {
+    width: 250px;
+    font-size: 13px;
+    margin-top: 24px;
+    font-weight: bold;
+}
+
+.yes {
+    color: black;
+    font-weight: bold;
+}
+
+.prune-node {
+    animation-duration: 3s;
+    animation-name: prune;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes prune {
+    0% {
+        filter: grayscale(0%);
+    }
+    100% {
+        filter: grayscale(100%);
+        color: white;
+    }
+}
+
+.prune-word {
+    animation-duration: 3s;
+    animation-name: prune-word;
+    animation-fill-mode: forwards;
+}
+
+@keyframes prune-word {
+    0% {
+        color: black;
+    }
+    100% {
+        color: #b0b0b0;
+    }
+}
+
+.highlighted-code {
+    background-color: #FFFF99;
+    font-weight: bold;
 }
