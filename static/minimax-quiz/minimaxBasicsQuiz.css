@@ -213,7 +213,7 @@ input {
     margin-right: 20px;
     margin-left: -13.5px;
     font-size: 12px;
-    z-index: 1
+    z-index: 1;
 }
 
 .tri {
@@ -229,4 +229,198 @@ input {
 #next-container {
     display: none;
     margin-top: -20px;
+}
+
+
+.tri-info {
+    margin-top: -2.5px;
+    margin-bottom: -2.5px;
+}
+
+.start-info {
+    margin-bottom: 7px;
+}
+
+.fill-info {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline;
+}
+
+.tri-info {
+    font-size: 10px;
+    color: black;
+    text-align: left;
+}
+
+.star {
+    font-size: 40px;
+    position: absolute;
+    left: 175px;
+    top: -37px;
+    color: yellow;
+    font-weight: bold;
+}
+
+.star-container {
+    position: relative;
+    display: inline-block;
+    width: 100%
+}
+
+.pointer, .pointer-info {
+    position: absolute;
+}
+
+.pointer-info {
+    width: 270px;
+    font-size: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+#pointer-1 {
+    bottom: 275px;
+    left: 440px;
+    display: block;
+}
+
+#pointer-info-1 {
+    top: 605px;
+    left: 290px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+.pointer {
+    width: 65px;
+    animation: float .75s ease-in-out infinite;
+}
+
+.tri, .up-tri {
+    text-align: center;
+    font-weight: bold;
+}
+
+input[type="text"]:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+.score-update {
+    text-align: center;
+    position: relative;
+}
+
+.show-animation {
+   animation: show 2s ease-in-out 1 forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    25%, 75% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.incorrect-update {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+    font-size: 17px;
+    border: 2.5px solid black;
+    font-weight: bold;
+    visibility: hidden;
+    position: absolute;
+    left: 442px;
+    top: -10px;
+}
+
+.correct-update {
+    width: 36px;
+    margin-bottom: 8px;
+    visibility: hidden;
+}
+
+#pointer-2{
+   top: 595px;
+   left: 720px;
+}
+
+#pointer-info-2{
+    top: 603px;
+    left: 664px;
+}
+
+#pointer-3{
+   top: 420px;
+   left: 520px;
+}
+
+#pointer-info-3{
+    top: 428px;
+    left: 370px;
+}
+
+#pointer-4{
+   top: 598px;
+   left: 818px;
+}
+
+#pointer-info-4{
+    top: 606px;
+    left: 668px;
+}
+
+#pointer-5{
+   top: 598px;
+   left: 1095px;
+}
+
+#pointer-info-5{
+    top: 606px;
+    left: 1040px;
+}
+
+#pointer-6{
+   top: 420px;
+   left: 1020px;
+}
+
+#pointer-info-6{
+    top: 428px;
+    left: 965px;
+}
+
+#pointer-7{
+   top: 275px;
+   left: 830px;
+}
+
+#pointer-info-7{
+    top: 282px;
+    left: 776px;
+}
+
+.minimax-tree-html {
+    margin-bottom: -40px;
 }

@@ -6,62 +6,81 @@
 <p class="subtitle">Minimax Basics Quiz</p>
 
 <div class="basics-quiz-container">
-    <div class="center">
 
+    <div class="pointer-container" id="pointer-container">
+        <img id="pointer-1" class="pointer" src="{{ url_for('static', filename='images/pointer-left.png') }}" alt="Navigation Pointer">
+        <p id="pointer-info-1" class="pointer-info">Start</p>
+    </div>
+
+    <div class="start-info">
+        <div style="margin-bottom: -15px;">
+            <h6 class="fill-info">Fill in the Minimax Values</h6>
+            <h6 class="star-container">
+                <span class="star">*</span>
+            </h6>
+        </div>
+        <p class="tri-info"><i>Regular triangles are Max Nodes that select the highest value</i></p>
+        <p class="tri-info"><i>Upside-down triangles are Min Nodes that select the lowest value</i></p>
+    </div>
+    <div class="center">
         <div class="minimax-tree-html">
             <div class="row0-root-container">
-                <input class="minimax-value-7 tri">
+                <input type="text" class="minimax-value-7 tri" disabled="true">
                 <div class="triangle-container"><div class="root triangle"></div></div>
 
                 <div class="row1-left-branch-container">
                     <div class="edge"><div class="tree-edge tree-edge-left custom-edge-left-1"></div></div>
-                    <input class="minimax-value-3 up-tri">
+                    <input type="text" class="minimax-value-3 up-tri" disabled="true">
                     <div class="upsidedown-triangle-container"><div class="row1 upsidedown-triangle"></div></div>
 
                     <div class="row2-left-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-left custom-edge-left-2"></div></div>
-                        <input class="minimax-value-1 tri">
+                        <input type="text" class="minimax-value-1 tri">
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">10</div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">6</div></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">8</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">5</div></div></div>
                     </div>
 
                     <div class="row2-right-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-2"></div></div>
-                        <input class="minimax-value-2 tri">
+                        <input type="text" class="minimax-value-2 tri" disabled="true">
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">100</div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">8</div></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">50</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">7</div></div></div>
                     </div>
                 </div>
 
                 <div class="row1-right-branch-container">
                     <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-1"></div></div>
-                    <input class="minimax-value-6 up-tri">
+                    <input type="text" class="minimax-value-6 up-tri" disabled="true">
                     <div class="upsidedown-triangle-container"><div class="row1 upsidedown-triangle"></div></div>
 
                     <div class="row2-left-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-left custom-edge-left-2"></div></div>
-                        <input class="minimax-value-4 tri">
+                        <input type="text" class="minimax-value-4 tri" disabled="true">
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">1</div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">2</div></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">2</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">9</div></div></div>
                     </div>
 
                     <div class="row2-right-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-2"></div></div>
-                        <input class="minimax-value-5 tri">
+                        <input type="text" class="minimax-value-5 tri" disabled="true">
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">20</div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">4</div></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">14</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">12</div></div></div>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <button id="basic-results-btn">See Your Score!</button>
-        <div id="basic-results"></div>
+        <div id="score-update" class="score-update">
+            <h6 class="incorrect-update" id="incorrect-update"><span style="margin-right: 1px; text-align: center;">-</span>5</h6>
+            <img class="correct-update" id="correct-update" src="{{ url_for('static', filename='images/correct.png') }}" alt="Correct Answer">
+        </div>
+
+        <div style="margin-bottom: 10px; margin-top: -10px;" id="basic-results"></div>
 
         <div id="next-container">
         <a href="/alphabetaQuiz">

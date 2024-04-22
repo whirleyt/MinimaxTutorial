@@ -58,14 +58,17 @@
         <div id="description-container"></div>
         <div class="minimax-tree-html">
             <div class="row0-root-container">
+                <h6 class="minimax-value row-1">10</h6>
                 <div class="triangle-container"><div class="root triangle"></div></div>
 
                 <div class="row1-left-branch-container">
                     <div class="edge"><div class="tree-edge tree-edge-left custom-edge-left-1"></div></div>
+                    <h6 class="minimax-value row-2">10</h6>
                     <div class="upsidedown-triangle-container"><div class="row1 upsidedown-triangle"></div></div>
 
                     <div class="row2-left-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-left custom-edge-left-2"></div></div>
+                        <h6 class="minimax-value row-3">10</h6>
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
                         <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">10</div></div></div>
                         <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">6</div></div></div>
@@ -73,6 +76,7 @@
 
                     <div class="row2-right-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-2"></div></div>
+                        <h6 class="minimax-value row-3">100</h6>
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
                         <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">100</div></div></div>
                         <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center" id="prune-edge-1"></div></div><div class="square-container" id="prune-node-1"><div class="square">8</div></div></div>
@@ -81,10 +85,12 @@
 
                 <div class="row1-right-branch-container">
                     <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-1"></div></div>
+                    <h6 class="minimax-value row-2">2</h6>
                     <div class="upsidedown-triangle-container"><div class="row1 upsidedown-triangle"></div></div>
 
                     <div class="row2-left-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-left custom-edge-left-2"></div></div>
+                        <h6 class="minimax-value row-3">2</h6>
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
                         <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">1</div></div></div>
                         <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">2</div></div></div>
@@ -92,6 +98,7 @@
 
                     <div class="row2-right-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-2" id="prune-edge-2"></div></div>
+                        <h6 class="minimax-value row-3" id="prune-value">20</h6>
                         <div class="triangle-container" id="prune-node-2"><div class="row2 triangle"></div></div>
                         <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center" id="prune-edge-3"></div></div><div class="square-container" id="prune-node-3"><div class="square">20</div></div></div>
                         <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center" id="prune-edge-4"></div></div><div class="square-container" id="prune-node-4"><div class="square">4</div></div></div>
@@ -102,7 +109,7 @@
         <div class="navigation">
             <img id="previous" class="previous" src="{{ url_for('static', filename='images/prev.png') }}" alt="Previous Navigation">
             <img id="next" class="next" src="{{ url_for('static', filename='images/next.png') }}" alt="Next Navigation">
-            <img id="pointer-1" class="pointer" src="{{ url_for('static', filename='images/pointer.png') }}" alt="Navigation Pointer">
+            <img id="pointer-1" class="pointer" src="{{ url_for('static', filename='images/pointer-right.png') }}" alt="Navigation Pointer">
             <p id="pointer-1-info" class="pointer-1-info">Navigate through the Alpha-beta Pruning Tutorial</p>
             <a href="/alphabetaMain" id="restart-btn">
                 <img id="restart" class="restart" src="{{ url_for('static', filename='images/restart.png') }}" alt="Restart Navigation">
