@@ -16,7 +16,7 @@
         <div style="margin-bottom: -15px;">
             <h6 class="fill-info">Fill in the Minimax Values</h6>
             <h6 class="star-container">
-                <span class="star">*</span>
+                <span><img id="star-1" class="star" src="{{ url_for('static', filename='images/star.png') }}" alt="Star Icon"></span>
             </h6>
         </div>
         <p class="tri-info"><i>Regular triangles are Max Nodes that select the highest value</i></p>
@@ -75,8 +75,8 @@
             </div>
         </div>
 
-        <div id="score-update" class="score-update">
-            <h6 class="incorrect-update" id="incorrect-update"><span style="margin-right: 1px; text-align: center;">-</span>5</h6>
+        <div id="score-update" class="score-update" style="margin-top: -20px;">
+            <img class="incorrect-update" id="incorrect-update" src="{{ url_for('static', filename='images/incorrect.png') }}" alt="Incorrect Answer">
             <img class="correct-update" id="correct-update" src="{{ url_for('static', filename='images/correct.png') }}" alt="Correct Answer">
         </div>
 
@@ -94,4 +94,4 @@
     </div>
 </div>
 
-{% endblock %}>
+{% endblock %}

@@ -1,5 +1,6 @@
 .basics-quiz-container{
     width: 87%;
+    height: 90%;
     margin: 0 auto;
     padding: 20px;
     margin-bottom: 20px;
@@ -341,23 +342,17 @@ input[type="text"]:focus {
 .incorrect-update {
     width: 35px;
     height: 35px;
-    line-height: 35px;
-    text-align: center;
-    background-color: white;
-    color: red;
-    border-radius: 50%;
-    font-size: 17px;
-    border: 2.5px solid black;
-    font-weight: bold;
     visibility: hidden;
     position: absolute;
     left: 442px;
-    top: -10px;
+    top: -15px;
 }
 
 .correct-update {
-    width: 36px;
-    margin-bottom: 8px;
+    width: 35px;
+    position: absolute;
+    left: 442px;
+    top: -15px;
     visibility: hidden;
 }
 
@@ -421,6 +416,12 @@ input[type="text"]:focus {
     left: 776px;
 }
 
-.minimax-tree-html {
-    margin-bottom: -40px;
+
+input:disabled {
+    cursor: not-allowed;
+}
+
+.star {
+    width: 20px;
+    margin-top: 5px;
 }

@@ -39,6 +39,14 @@
 </div>
 
 </body>
-
-<script type="text/javascript" src="{{ url_for('static', filename = 'main.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = '/js/main.js') }}"></script>
+{% if request.path == '/alphabetaMain' %}
+<script src="{{ url_for('static', filename='/js/alphabetaTutorial.js') }}"></script>
+{% elif request.path == '/minimaxBasicsQuiz' %}
+<script src="{{ url_for('static', filename='/js/minimaxBasicsQuiz.js') }}"></script>
+{% elif request.path == '/alphabetaQuiz' %}
+<script src="{{ url_for('static', filename='/js/alphabetaQuiz.js') }}"></script>
+{% endif %}
 </html>
+
+

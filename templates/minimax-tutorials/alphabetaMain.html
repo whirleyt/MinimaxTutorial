@@ -9,15 +9,15 @@
     <div>
         <div class="alpha">
             <img class="alpha-symbol" src="{{ url_for('static', filename='images/alpha.png') }}" alt="Alpha Symbol">
-            <p class="symbol-description">Highest value seen so far</p>
+            <p class="symbol-description">Highest value seen so far; Max nodes update alpha</p>
         </div>
         <div class="beta">
             <img class="beta-symbol" src="{{ url_for('static', filename='images/beta.png') }}" alt="Beta Symbol">
-            <p class="symbol-description">Lowest value seen so far</p>
+            <p class="symbol-description">Lowest value seen so far; Min nodes update beta</p>
         </div>
         <div class="description">
             <h6 class="alpha-beta-info"><b>Definition</b> The highest and lowest values seen along the path to that node <br>
-            Alpha beta is only passed down; Terminal values go up</h6>
+                Alpha and beta values are only passed down; Terminal values go up</h6>
         </div>
     </div>
 
@@ -126,4 +126,4 @@
     </div>
 </div>
 
-{% endblock %}>
+{% endblock %}
