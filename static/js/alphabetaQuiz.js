@@ -42,7 +42,6 @@ $(document).ready(function() {
 
 	for (let i = 2; i <= 14; i++) {
         $('#alpha-input-' + i).on('input', function() {
-            console.log(score)
             var inputVal = $(this).val();
             setUp()
 
@@ -127,7 +126,6 @@ $(document).ready(function() {
         })
 
         $('#beta-input-' + i).on('input', function() {
-            console.log(score)
             var inputVal = $(this).val();
             setUp()
 
