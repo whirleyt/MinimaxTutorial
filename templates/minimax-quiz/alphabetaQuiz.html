@@ -10,19 +10,23 @@
     <div>
         <div class="alpha">
             <img class="alpha-symbol" src="{{ url_for('static', filename='images/alpha.png') }}" alt="Alpha Symbol">
-            <p class="symbol-description">Highest value seen so far; Max nodes update alpha</p>
+            <p class="symbol-description">Highest value seen so far <span style="color: black; font-weight: bold;">|</span> Max nodes update alpha</p>
         </div>
         <div class="beta">
             <img class="beta-symbol" src="{{ url_for('static', filename='images/beta.png') }}" alt="Beta Symbol">
-            <p class="symbol-description">Lowest value seen so far; Min nodes update beta</p>
+            <p class="symbol-description">Lowest value seen so far <span style="color: black; font-weight: bold;">|</span> Min nodes update beta</p>
         </div>
         <div class="description">
             <h6 class="alpha-beta-info"><b>Definition</b> The highest and lowest values seen along the path to that node <br>
                 Alpha and beta values are only passed down; Terminal values go up</h6>
+            <h6 style="font-size: 12px;"><b>If β ≤ α: Prune</b></h6>
         </div>
     </div>
-    <div class="hint-section">
-        <img class="hint-icon" src="{{ url_for('static', filename='images/hint.png') }}" alt="Hint Icon">
+    <div class="prune-hint-section">
+        <div>
+            <img class="hint-icon" src="{{ url_for('static', filename='images/hint.png') }}" alt="Hint Icon">
+            <img class="prune-icon" src="{{ url_for('static', filename='images/x.svg') }}" alt="Drag and Drop Prune Icon">
+        </div>
         <div class="hint-text"></div>
     </div>
 
@@ -77,15 +81,17 @@
                 <div style="margin-bottom: -10px;"></div>
                 <p class="pointer-1-info">Enter the alpha and beta values</p>
                 <div style="margin-bottom: -10px;"></div>
-                <p class="pointer-1-info">Click <span><img class="hint-icon-description" src="{{ url_for('static', filename='images/hint.png') }}" alt="Hint Icon"></span> if you need help</p>
+                <p>Click <span><img class="hint-icon-description" src="{{ url_for('static', filename='images/hint.png') }}" alt="Hint Icon"></span> if you need help</p>
+                <div style="margin-bottom: -14px;"></div>
+                <p class="prune-info">Drag and drop <span><img class="prune-info-icon" src="{{ url_for('static', filename='images/x.svg') }}" alt="Drag and Drop Prune Icon"></span> to prune</p>
             </div>
         </div>
 
         <div id="alpha-beta-info-container-2">
             <div class="alpha-beta-page-info-2">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-2" name="alpha-input-1" placeholder="α">
-                    <input class="alpha-input" type="text" id="beta-input-2" name="beta-input-1" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-2" placeholder="α">
+                    <input class="beta-input" type="text" id="beta-input-2" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -93,8 +99,8 @@
         <div id="alpha-beta-info-container-3">
             <div class="alpha-beta-page-info-3">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-3" name="alpha-input-2" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-3" name="beta-input-2" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-3" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-3" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -102,8 +108,8 @@
         <div id="alpha-beta-info-container-4">
             <div class="alpha-beta-page-info-4">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-4" name="alpha-input-3" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-4" name="beta-input-3" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-4" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-4" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -111,8 +117,8 @@
         <div id="alpha-beta-info-container-5">
             <div class="alpha-beta-page-info-5">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-5" name="alpha-input-3" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-5" name="beta-input-3" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-5" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-5" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -120,8 +126,8 @@
         <div id="alpha-beta-info-container-6">
             <div class="alpha-beta-page-info-6">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-6" name="alpha-input-3" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-6" name="beta-input-3" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-6" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-6" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -129,8 +135,8 @@
         <div id="alpha-beta-info-container-7">
             <div class="alpha-beta-page-info-7">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-7" name="alpha-input-6" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-7" name="beta-input-6" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-7" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-7" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -138,8 +144,8 @@
         <div id="alpha-beta-info-container-8">
             <div class="alpha-beta-page-info-8">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-8" name="alpha-input-7" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-8" name="beta-input-7" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-8" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-8" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -147,8 +153,8 @@
         <div id="alpha-beta-info-container-9">
             <div class="alpha-beta-page-info-9">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-9" name="alpha-input-8" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-9" name="beta-input-8" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-9" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-9" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -156,8 +162,8 @@
         <div id="alpha-beta-info-container-10">
             <div class="alpha-beta-page-info-10">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-10" name="alpha-input-8" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-10" name="beta-input-8" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-10" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-10" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -165,8 +171,8 @@
         <div id="alpha-beta-info-container-11">
             <div class="alpha-beta-page-info-11">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-11" name="alpha-input-8" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-11" name="beta-input-8" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-11" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-11" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -174,8 +180,8 @@
         <div id="alpha-beta-info-container-12">
             <div class="alpha-beta-page-info-12">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-12" name="alpha-input-8" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-12" name="beta-input-8" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-12" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-12" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -183,8 +189,8 @@
         <div id="alpha-beta-info-container-13">
             <div class="alpha-beta-page-info-13">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-13" name="alpha-input-8" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-13" name="beta-input-8" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-13" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-13" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -192,8 +198,8 @@
         <div id="alpha-beta-info-container-14">
             <div class="alpha-beta-page-info-14">
                 <form>
-                    <input class="alpha-input" type="text" id="alpha-input-14" name="alpha-input-8" placeholder="α" disabled="true">
-                    <input class="alpha-input" type="text" id="beta-input-14" name="beta-input-8" placeholder="β" disabled="true">
+                    <input class="alpha-input" type="text" id="alpha-input-14" placeholder="α" disabled="true">
+                    <input class="beta-input" type="text" id="beta-input-14" placeholder="β" disabled="true">
                 </form>
             </div>
         </div>
@@ -214,38 +220,38 @@
                         <div class="edge"><div class="tree-edge tree-edge-left custom-edge-left-2"></div></div>
                         <div class="minimax-value tri tri-val-1">8</div>
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">8</div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">5</div></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="term-val-1 square">8</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="term-val-2 square">5</div></div></div>
                     </div>
 
                     <div class="row2-right-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-2"></div></div>
                         <div class="minimax-value tri tri-val-2">50</div>
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">50</div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">7</div></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="term-val-3 square">50</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="term-val-4 square">7</div></div></div>
                     </div>
                 </div>
 
                 <div class="row1-right-branch-container">
                     <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-1"></div></div>
                     <div class="minimax-value up-tri tri-val-6">9</div>
-                    <div class="upsidedown-triangle-container"><div class="row1 upsidedown-triangle"></div></div>
+                    <div class="upsidedown-triangle-container"><div class="row1 upsidedown-triangle drag-drop-8"></div></div>
 
                     <div class="row2-left-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-left custom-edge-left-2"></div></div>
                         <div class="minimax-value tri tri-val-4">9</div>
                         <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">2</div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">9</div></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="term-val-5 square">2</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="term-val-6 square">9</div></div></div>
                     </div>
 
                     <div class="row2-right-branch-container">
                         <div class="edge"><div class="tree-edge tree-edge-right custom-edge-right-2"></div></div>
                         <div class="minimax-value tri tri-val-5">14</div>
-                        <div class="triangle-container"><div class="row2 triangle"></div></div>
-                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">14</div></div></div>
-                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="square">12</div></div></div>
+                        <div class="triangle-container"><div class="row2 triangle drag-drop-12"></div></div>
+                        <div class="row3 left-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="term-val-7 square">14</div></div></div>
+                        <div class="row3 right-terminal"><div class="edge"><div class="tree-edge tree-edge-center"></div></div><div class="square-container"><div class="term-val-8 square">12</div></div></div>
                     </div>
                 </div>
 
@@ -257,6 +263,7 @@
             <img class="correct-update-2" id="correct-update-2" src="{{ url_for('static', filename='images/correct.png') }}" alt="Correct Answer">
         </div>
 
+        <div style="margin-bottom: -40px; margin-top: -40px;"></div>
         <div class="resultsText" id="resultsText"></div>
 
         <div class="see-your-results">
@@ -267,6 +274,12 @@
         </a>
         <h6 id="linkDescription" class="icon-description">See Your Results</h6>
         </div>
+
+        <a href="/alphabetaQuiz" id="restart-btn-2">
+            <img id="restart-2" class="restart" src="{{ url_for('static', filename='images/restart.png') }}" alt="Restart Quiz Navigation">
+        </a>
+
+    </div>
 
     </div>
 </div>

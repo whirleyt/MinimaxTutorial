@@ -44,17 +44,7 @@ $(document).ready(function() {
               console.log(score)
                     var inputVal = $(this).val();
 
-                    var correctUpdate2 = $('#correct-update-2');
-                    var incorrectUpdate2 = $('#incorrect-update-2');
-                    correctUpdate2.removeClass('show-animation');
-                    incorrectUpdate2.removeClass('show-animation');
-                    var newIncorrectUpdate2 = incorrectUpdate2.clone(true);
-                    incorrectUpdate2.before(newIncorrectUpdate2);
-                    $("." + incorrectUpdate2.attr("class") + ":last").remove();
-
-                    var incorrectUpdate2 = $('#incorrect-update-2');
-                    incorrectUpdate2.css('visibility', 'hidden');
-                    incorrectUpdate2[0].offsetHeight;
+                    setUp()
 
 
                     if(inputVal != '') {
@@ -141,19 +131,7 @@ $(document).ready(function() {
               console.log(score)
                     var inputVal = $(this).val();
 
-                    var correctUpdate2 = $('#correct-update-2');
-                    var incorrectUpdate2 = $('#incorrect-update-2');
-                    correctUpdate2.removeClass('show-animation');
-                    incorrectUpdate2.removeClass('show-animation');
-                    var newIncorrectUpdate2 = incorrectUpdate2.clone(true);
-                    incorrectUpdate2.before(newIncorrectUpdate2);
-                    $("." + incorrectUpdate2.attr("class") + ":last").remove();
-
-                    var incorrectUpdate2 = $('#incorrect-update-2');
-                    incorrectUpdate2.css('visibility', 'hidden');
-                    incorrectUpdate2[0].offsetHeight;
-
-
+                    setUp()
 
                     if(inputVal != '') {
                     alphabetaAnswers['question' + i].beta.push(inputVal);
@@ -212,6 +190,20 @@ $(document).ready(function() {
               })
           }
 
+    function setUp(){
+           var correctUpdate2 = $('#correct-update-2');
+           var incorrectUpdate2 = $('#incorrect-update-2');
+           correctUpdate2.removeClass('show-animation');
+           incorrectUpdate2.removeClass('show-animation');
+           var newIncorrectUpdate2 = incorrectUpdate2.clone(true);
+           incorrectUpdate2.before(newIncorrectUpdate2);
+           $("." + incorrectUpdate2.attr("class") + ":last").remove();
+
+           var incorrectUpdate2 = $('#incorrect-update-2');
+           incorrectUpdate2.css('visibility', 'hidden');
+           incorrectUpdate2[0].offsetHeight;
+    }
+
     function updateHint(questionNum) {
         if(questionNum <= 14) {
             var hintHTML = alphabetaValues[questionNum].hint;
@@ -239,8 +231,67 @@ $(document).ready(function() {
        $('#resultLink').click(function() {
             $('.see-your-results').css('display', 'none');
             $('#resultsText').html('<h6>You Scored ' + score  + '%</h6>');
-//          $('#next-container').css('display', 'block');
             $('.alphabeta-quiz-container').css('box-shadow', '0px 0px 10px #76c893');
+            setTimeout(function() {
+                $('#restart-2').css('display', 'inline');
+            }, 2000)
       })
 
+      var isOverSpecifiedElement;
+
+
+
+      $(".prune-icon").draggable({
+          revert: "invalid",
+          helper: "clone",
+          cursor: "move",
+          start: function(event, ui) {
+              $(this).addClass('dragging');
+              var clone = $(this).clone().appendTo('body');
+          },
+          stop: function(event, ui) {
+             $(this).removeClass('dragging');
+          }
+      });
+
+      for(let i=1; i<=7; i++){
+          $('.tri-val-'+ i).droppable({
+                hoverClass: "drag-hover",
+                accept: ".prune-icon",
+                drop: function(event, ui) {
+                     setUp();
+                     console.log("Node pune on triangle value: " + i);
+                     score-= 5;
+                     $('#incorrect-update-2').addClass('show-animation');
+                }
+          })
+      }
+
+
+      for(let i=1; i<=8; i++){
+          $('.term-val-'+ i).droppable({
+                  hoverClass: "drag-hover",
+                  accept: ".prune-icon",
+                  drop: function(event, ui) {
+                        setUp();
+                        console.log("Node pune on terminal value: " + i);
+                        if(i == 4 || i == 8){
+                            $('#correct-update-2').addClass('show-animation');
+                            $('.term-val-'+i).addClass('prune-node')
+                        } else {
+                            score-= 5;
+                            $('#incorrect-update-2').addClass('show-animation');
+                        }
+                  }
+           })
+      }
+
+//          drag: function(event, ui) {
+//          console.log("isOverSpecifiedElement:", isOverSpecifiedElement);
+//              if (isOverSpecifiedElement) {
+//                  $('.tri').addClass('drag-hover');
+//              } else {
+//                  $('.tri').removeClass('drag-hover');
+//              }
+//          },
  })

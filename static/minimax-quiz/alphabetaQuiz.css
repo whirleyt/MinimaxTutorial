@@ -245,7 +245,7 @@
     font-size: 9.75px;
     position: absolute;
     z-index: 1;
-    margin-top: -17px;
+    margin-top: -18px;
     color: grey;
 }
 
@@ -261,7 +261,7 @@
   width: 318px;
   height: 290px;
   margin-left: 82px;
-  margin-top: 32px;
+  margin-top: 5px;
 }
 
 .custom-code-border::before {
@@ -312,6 +312,14 @@
     width: 25px;
     height: 25px;
     font-size: 11px;
+}
+
+.alpha-input:disabled {
+    background-color: #F8F8F8;
+}
+
+.beta-input:disabled {
+    background-color: #F8F8F8;
 }
 
 .minimax-tree-html {
@@ -435,7 +443,7 @@ input[type="text"]:focus {
 
 #pointer-1-info {
     left: -47px;
-    top: 170px;
+    top: 156px;
     width: 200px;
     font-size: 9px;
     color: black;
@@ -457,6 +465,14 @@ input[type="text"]:focus {
 
 .hint-icon {
     width: 15px;
+    display: inline;
+    margin-right: 5px;
+}
+
+.prune-icon {
+    width: 28px;
+    display: inline;
+    z-index: 9999;
 }
 
 .hint-icon-description {
@@ -467,8 +483,8 @@ input[type="text"]:focus {
 .score-update {
     text-align: center;
     position: relative;
-    margin-top: -30px;
-    margin-bottom: -10px;
+    margin-top: -40px;
+    padding-bottom: 30px;
 }
 
 .show-animation {
@@ -529,4 +545,38 @@ input[type="text"]:focus {
 .resultsText {
     color: #76c893;
     font-weight: bold;
+}
+
+.prune-info-icon {
+    width: 18px;
+}
+
+.dragging {
+    visibility: hidden !important;
+}
+
+.drag-hover {
+    color: white;
+}
+
+.prune-node {
+    animation-duration: 1s;
+    animation-name: prune;
+    animation-fill-mode: forwards;
+}
+
+@keyframes prune {
+    0% {
+        filter: grayscale(0%);
+    }
+    100% {
+        filter: grayscale(100%);
+        color: white;
+    }
+}
+
+#restart-2 {
+    width: 28px;
+    display: none;
+    margin-top: 15px;
 }
