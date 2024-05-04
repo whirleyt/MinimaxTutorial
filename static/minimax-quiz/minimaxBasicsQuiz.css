@@ -1,6 +1,7 @@
 .basics-quiz-container{
-    width: 87%;
-    height: 90%;
+    width: 61.4%;
+    max-width: 964px;
+    min-width: 964px;
     margin: 0 auto;
     padding: 20px;
     margin-bottom: 20px;
@@ -272,6 +273,10 @@ input {
     width: 100%
 }
 
+.pointer-container{
+	position: relative;
+}
+
 .pointer, .pointer-info {
     position: absolute;
 }
@@ -284,14 +289,14 @@ input {
 }
 
 #pointer-1 {
-    bottom: 275px;
-    left: 440px;
+    top: 415px;
+    left: 100px;
     display: block;
 }
 
 #pointer-info-1 {
-    top: 605px;
-    left: 290px;
+    top: 424px;
+    left: -50px;
 }
 
 @keyframes float {
@@ -360,65 +365,64 @@ input[type="text"]:focus {
 }
 
 #pointer-2{
-   top: 595px;
-   left: 720px;
+   top: 410px;
+   left: 382px;
 }
 
 #pointer-info-2{
-    top: 603px;
-    left: 664px;
+    top: 418px;
+    left: 327px;
 }
 
 #pointer-3{
-   top: 420px;
-   left: 520px;
+   top: 230px;
+   left: 175px;
 }
 
 #pointer-info-3{
-    top: 428px;
-    left: 370px;
+    top: 240px;
+    left: 24px;
 }
 
 #pointer-4{
-   top: 598px;
-   left: 818px;
+   top: 410px;
+   left: 480px;
 }
 
 #pointer-info-4{
-    top: 606px;
-    left: 668px;
+    top: 420px;
+    left: 330px;
 }
 
 #pointer-5{
-   top: 598px;
-   left: 1095px;
+   top: 410px;
+   left: 760px;
 }
 
 #pointer-info-5{
-    top: 606px;
-    left: 1040px;
+    top: 418px;
+    left: 706px;
 }
 
 #pointer-6{
-   top: 420px;
-   left: 1020px;
+   top: 230px;
+   left: 680px;
 }
 
 #pointer-info-6{
-    top: 428px;
-    left: 965px;
+    top: 237px;
+    left: 625px;
 }
 
 #pointer-7{
-   top: 275px;
-   left: 830px;
+   top: 90px;
+   left: 495px;
 }
 
 #pointer-info-7{
-    top: 282px;
-    left: 776px;
+    top: 97px;
+    left: 440px;
 }
-
 
 input:disabled {
     cursor: not-allowed;

@@ -111,7 +111,7 @@ $(document).ready(function() {
                     style: 'left: 232px; top: 180px;'
                 },
             ],
-            text: "<div><p>The Max Node prefers 10 over 6.</p></div><div><p>The alpha-beta values that are passed down are -∞ and ∞. 10, the value of the min node, gets passed down as the lowest value seen so far. </p></div>",
+            text: "<div><p>The alpha-beta values that are passed down are -∞ and ∞. 10, the value of the min node, gets passed down as the lowest value seen so far. </p></div>",
             textStyle: ''
         },
         {

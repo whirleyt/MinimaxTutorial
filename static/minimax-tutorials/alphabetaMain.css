@@ -1,5 +1,7 @@
 .alphabeta-main-container {
-    width: 87%;
+    width: 61.4%;
+    max-width: 964px;
+    min-width: 964px;
     margin: 0 auto;
     padding: 20px;
     margin-bottom: 20px;
