@@ -217,8 +217,6 @@ $(document).ready(function() {
         }
     });
 
-    displayResults()
-
     function displayResults() {
         setTimeout(function() {
             $('.see-your-results').css('display', 'inline');
