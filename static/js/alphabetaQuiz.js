@@ -235,7 +235,8 @@ $(document).ready(function() {
 
     var isOverSpecifiedElement;
 
-    $(".prune-icon").draggable({
+    let element= $(".prune-icon");
+    element.draggable({
         revert: "invalid",
         helper: "clone",
         cursor: "move",
@@ -252,8 +253,8 @@ $(document).ready(function() {
     });
 
     for (let i = 1; i <= 7; i++) {
-        let element= $('.tri-val-' + i);
-        element.droppable({
+        let target= $('.tri-val-' + i);
+        target.droppable({
             hoverClass: "drag-hover",
             accept: ".prune-icon",
             drop: function(event, ui) {
@@ -271,8 +272,8 @@ $(document).ready(function() {
 	}
 
     for (let i = 1; i <= 8; i++) {
-        let element= $('.term-val-' + i);
-        element.droppable({
+        let target= $('.term-val-' + i);
+        target.droppable({
             hoverClass: "drag-hover",
             accept: ".prune-icon",
             drop: function(event, ui) {
@@ -298,16 +299,16 @@ $(document).ready(function() {
             event.preventDefault();
         });
 
-        element.on('touchend', function(event) {
-            event.preventDefault();
-            var target = document.elementFromPoint(x, y);
-            if ($(target).hasClass('tri-val-' + i)) {
-                dropTriangle(i);
-            }
-            if ($(target).hasClass('term-val-' + i)) {
-                dropTerminal(i);
-            }
-        });
+     element.on('touchend', function(event) {
+          event.preventDefault();
+          let targetPoint = document.elementFromPoint(x, y);
+          if ($(targetPoint).hasClass('tri-val-' + i)) {
+             dropTriangle(i);
+          }
+          if ($(targetPoint).hasClass('term-val-' + i)) {
+             dropTerminal(i);
+          }
+     });
 
     function saveQuizSession2() {
         postData = {
