@@ -248,6 +248,7 @@ $(document).ready(function() {
         stop: function(event, ui) {
             $(this).removeClass('dragging');
         }
+        distance: 15
     });
 
     for (let i = 1; i <= 7; i++) {
