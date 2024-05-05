@@ -249,7 +249,7 @@ $(document).ready(function() {
         stop: function(event, ui) {
             $(this).removeClass('dragging');
         },
-        distance: 5
+        distance: 15
     });
 
     for (let i = 1; i <= 7; i++) {
@@ -295,20 +295,41 @@ $(document).ready(function() {
         }
     }
 
-     element.on('touchstart', function(event) {
-            event.preventDefault();
-        });
+	let iconPosition = { x: 0, y: 0 };
 
-     element.on('touchend', function(event) {
-          event.preventDefault();
-          let targetPoint = document.elementFromPoint(x, y);
-          if ($(targetPoint).hasClass('tri-val-' + i)) {
-             dropTriangle(i);
-          }
-          if ($(targetPoint).hasClass('term-val-' + i)) {
-             dropTerminal(i);
-          }
-     });
+	element.on('touchmove', function(event) {
+    event.preventDefault();
+    let touch = event.originalEvent.changedTouches[0];
+    iconPosition = {
+        x: touch.clientX,
+        y: touch.clientY
+    };
+	});
+
+	element.on('touchend', function(event) {
+    event.preventDefault();
+
+    for (let i = 1; i <= 7; i++) {
+        let target = $('.tri-val-' + i);
+        if (isOverlapping(iconPosition, target)) {
+            dropTriangle(i);
+            return;
+        }
+    }
+
+    for (let i = 1; i <= 8; i++) {
+        let target = $('.term-val-' + i);
+        if (isOverlapping(iconPosition, target)) {
+            dropTerminal(i);
+            return;
+        }
+    }
+	});
+
+	function isOverlapping(point, element) {
+        let rect = element[0].getBoundingClientRect();
+        return point.x >= rect.left && point.x <= rect.right && point.y >= rect.top && point.y <= rect.bottom;
+	}
 
     function saveQuizSession2() {
         postData = {
