@@ -645,4 +645,10 @@ input[type="text"]:focus {
             height: 161.29%;
             overflow: hidden;
         }
+    .alpha-input, .beta-input {
+        text-align: center;
+        width: 25px;
+        height: 25px;
+        font-size: 9px;
+    }
 }
