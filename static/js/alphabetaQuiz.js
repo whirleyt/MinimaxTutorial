@@ -256,9 +256,9 @@ $(document).ready(function() {
         var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
         if (offsetX !== undefined && offsetY !== undefined) {
             $('.dragging').css({
-                top: touch.clientY - offsetY,
-                left: touch.clientX - offsetX
-            });
+                    top: touch.clientY - $('.dragging').height() / 2,
+                    left: touch.clientX - $('.dragging').width() / 2
+                });
         }
     });
 
