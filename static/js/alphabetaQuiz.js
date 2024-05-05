@@ -245,7 +245,8 @@ $(document).ready(function() {
         },
         stop: function(event, ui) {
             $(this).removeClass('dragging');
-        }
+        },
+        distance: 1
     });
 
     for (let i = 1; i <= 7; i++) {
@@ -253,33 +254,46 @@ $(document).ready(function() {
             hoverClass: "drag-hover",
             accept: ".prune-icon",
             drop: function(event, ui) {
-                setUp();
-                console.log("Node pune on triangle value: " + i);
-                score -= 5;
-                prunedNodes.push("Node: " + i);
-                $('#incorrect-update-2').addClass('show-animation');
+                dropTriangle(i);
+            },
+            touchstart: function(event) {
+                dropTriangle(i);
             }
         })
     }
 
+	function dropTriangle(i){
+			setUp();
+            console.log("Node pune on triangle value: " + i);
+            score -= 5;
+            prunedNodes.push("Node: " + i);
+            $('#incorrect-update-2').addClass('show-animation');
+	}
 
     for (let i = 1; i <= 8; i++) {
         $('.term-val-' + i).droppable({
             hoverClass: "drag-hover",
             accept: ".prune-icon",
             drop: function(event, ui) {
-                setUp();
-                console.log("Node pune on terminal value: " + i);
-                prunedNodes.push("Terminal: " + i);
-                if (i == 4 || i == 8) {
-                    $('#correct-update-2').addClass('show-animation');
-                    $('.term-val-' + i).addClass('prune-node')
-                } else {
-                    score -= 5;
-                    $('#incorrect-update-2').addClass('show-animation');
-                }
+                dropTerminal(i);
+            },
+            touchstart: function(event) {
+                dropTerminal(i);
             }
         })
+    }
+
+    function dropTerminal(i){
+		setUp();
+        console.log("Node pune on terminal value: " + i);
+        prunedNodes.push("Terminal: " + i);
+        if (i == 4 || i == 8) {
+           $('#correct-update-2').addClass('show-animation');
+           $('.term-val-' + i).addClass('prune-node')
+        } else {
+           score -= 5;
+           $('#incorrect-update-2').addClass('show-animation');
+        }
     }
 
     function saveQuizSession2() {
