@@ -5,6 +5,15 @@
     height: 38px;
 }
 
+.title {
+	min-width: 740px;
+}
+
+.subtitle {
+	min-width: 730px;
+}
+
+
 .basics-container {
     width: 61.4%;
     max-width: 964px;

@@ -5,6 +5,15 @@
     height: 38px;
 }
 
+.title {
+	min-width: 984px;
+}
+
+.subtitle {
+	min-width: 974px;
+}
+
+
 .basics-quiz-container{
 	width: 61.4%;
     max-width: 964px;

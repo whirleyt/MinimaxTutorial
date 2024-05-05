@@ -5,6 +5,14 @@
     height: 38px;
 }
 
+.title {
+	min-width: 984px;
+}
+
+.subtitle {
+	min-width: 974px;
+}
+
 .alphabeta-quiz-container {
     width: 61.4%;
     max-width: 964px;
