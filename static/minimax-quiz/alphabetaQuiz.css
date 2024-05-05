@@ -638,11 +638,11 @@ input[type="text"]:focus {
 }
 
 @media only screen and (max-width: 994px) {
-    html, body {
-        transform: scale(0.63);
+	html, body {
+        transform: scale(0.65);
         transform-origin: 0 0;
-        width: 158.730%;
-        height: 158.730%;
-        overflow: hidden
+        width: 153.846%;
+        height: 153.846%;
+        overflow: hidden;
     }
 }

@@ -451,10 +451,10 @@ input:disabled {
 
 @media only screen and (max-width: 994px) {
     html, body {
-        transform: scale(0.63);
-        transform-origin: 0 0;
-        width: 158.730%;
-        height: 158.730%;
-        overflow: hidden
-    }
+            transform: scale(0.65);
+            transform-origin: 0 0;
+            width: 153.846%;
+            height: 153.846%;
+            overflow: hidden;
+        }
 }
