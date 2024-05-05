@@ -249,6 +249,19 @@ $(document).ready(function() {
         distance: 1
     });
 
+	var offsetX, offsetY;
+
+    $(document).on('touchmove', function(event) {
+        event.preventDefault();
+        var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
+        if (offsetX !== undefined && offsetY !== undefined) {
+            $('.dragging').css({
+                top: touch.clientY - offsetY,
+                left: touch.clientX - offsetX
+            });
+        }
+    });
+
     for (let i = 1; i <= 7; i++) {
         $('.tri-val-' + i).droppable({
             hoverClass: "drag-hover",
@@ -295,6 +308,14 @@ $(document).ready(function() {
            $('#incorrect-update-2').addClass('show-animation');
         }
     }
+
+    $(".prune-icon").on('touchstart', function(event) {
+        var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
+        var draggable = $(this);
+        var offset = draggable.offset();
+        offsetX = touch.clientX - offset.left;
+        offsetY = touch.clientY - offset.top;
+    });
 
     function saveQuizSession2() {
         postData = {
