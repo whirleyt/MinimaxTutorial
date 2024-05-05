@@ -248,7 +248,7 @@ $(document).ready(function() {
         stop: function(event, ui) {
             $(this).removeClass('dragging');
         },
-        distance: 15
+        distance: 1
     });
 
     for (let i = 1; i <= 7; i++) {
@@ -261,7 +261,8 @@ $(document).ready(function() {
                 score -= 5;
                 prunedNodes.push("Node: " + i);
                 $('#incorrect-update-2').addClass('show-animation');
-            }
+            },
+            distance: 1
         })
     }
 
@@ -281,7 +282,8 @@ $(document).ready(function() {
                     score -= 5;
                     $('#incorrect-update-2').addClass('show-animation');
                 }
-            }
+            },
+            distance: 1
         })
     }
 
