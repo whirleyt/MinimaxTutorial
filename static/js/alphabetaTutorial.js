@@ -627,11 +627,11 @@ $(document).ready(function() {
                 highlightLines();
                 break;
             case 9:
-                linesToHighlight = [7, 16, 9];
+                linesToHighlight = [7, 16];
                 highlightLines();
                 break;
             case 10:
-                linesToHighlight = [18];
+                linesToHighlight = [18, 9];
                 highlightLines();
                 break;
             case 11:
