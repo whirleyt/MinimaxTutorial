@@ -151,6 +151,14 @@
     }
 }
 
+@media only screen and (max-width: 994px) {
+    html, body {
+        transform: scale(0.5);
+        transform-origin: 0 0;
+        width: 200%;
+        height: 200%;
+    }
+}
 
 .row2-right-branch-container,
 .row2-left-branch-container,

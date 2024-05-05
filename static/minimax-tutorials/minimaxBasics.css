@@ -74,3 +74,12 @@ h6 {
 .custom-top {
 	font-size: 12px;
 }
+
+@media only screen and (max-width: 750px) {
+    html, body {
+        transform: scale(0.7);
+        transform-origin: 0 0;
+        width: 142.857%;
+        height: 142.857%;
+    }
+}

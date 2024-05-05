@@ -247,7 +247,7 @@ $(document).ready(function() {
         },
         stop: function(event, ui) {
             $(this).removeClass('dragging');
-        }
+        },
         distance: 15
     });
 

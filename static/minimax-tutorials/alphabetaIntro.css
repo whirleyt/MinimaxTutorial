@@ -81,3 +81,12 @@ h5 {
 .size-decrease {
 	font-size: 12px;
 }
+
+@media only screen and (max-width: 470px) {
+    html, body {
+        transform: scale(0.8);
+        transform-origin: 0 0;
+        width: 125%;
+        height: 125%;
+	}
+}
