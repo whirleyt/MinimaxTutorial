@@ -379,6 +379,7 @@
 .minimax-tree-html {
     position: relative;
     margin-top: 30px;
+    padding-bottom: 10px;
 }
 
 .alpha-beta-page-info {
