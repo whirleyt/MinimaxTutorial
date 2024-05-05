@@ -83,10 +83,11 @@ h5 {
 }
 
 @media only screen and (max-width: 470px) {
-    html, body {
-        transform: scale(0.8);
+	html, body {
+        transform: scale(0.7);
         transform-origin: 0 0;
-        width: 125%;
-        height: 125%;
-	}
+        width: 142.857%;
+        height: 142.857%;
+        overflow: hidden
+    }
 }

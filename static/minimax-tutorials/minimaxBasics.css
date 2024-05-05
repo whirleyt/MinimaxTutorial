@@ -81,5 +81,6 @@ h6 {
         transform-origin: 0 0;
         width: 142.857%;
         height: 142.857%;
+        overflow: hidden
     }
 }

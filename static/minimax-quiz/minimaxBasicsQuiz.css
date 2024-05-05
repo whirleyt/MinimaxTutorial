@@ -151,15 +151,6 @@
     }
 }
 
-@media only screen and (max-width: 994px) {
-    html, body {
-        transform: scale(0.63);
-        transform-origin: 0 0;
-        width: 158.730%;
-        height: 158.730%;
-    }
-}
-
 .row2-right-branch-container,
 .row2-left-branch-container,
 .row1-left-branch-container,
@@ -456,4 +447,14 @@ input:disabled {
 .star {
     width: 20px;
     margin-top: 5px;
+}
+
+@media only screen and (max-width: 994px) {
+    html, body {
+        transform: scale(0.63);
+        transform-origin: 0 0;
+        width: 158.730%;
+        height: 158.730%;
+        overflow: hidden
+    }
 }

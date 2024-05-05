@@ -486,5 +486,6 @@
         transform-origin: 0 0;
         width: 158.730%;
         height: 158.730%;
+        overflow: hidden
     }
 }
