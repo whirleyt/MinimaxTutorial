@@ -207,7 +207,7 @@ $(document).ready(function() {
                     style: 'font-weight: bold; color: #0077b6; left: 315px; top: 385px;'
                 },
             ],
-            text: "<h4>Is<img class='b-symbol-q' src='/static/images/beta.png' alt='Beta Symbol'><span>≤</span><img class='a-symbol-q' src='/static/images/alpha.png' alt='Alpha Symbol'><span>?</span></h4>",
+            text: "<h6>Is<img class='b-symbol-q' src='/static/images/beta.png' alt='Beta Symbol'><span>≤</span><img class='a-symbol-q' src='/static/images/alpha.png' alt='Alpha Symbol'><span>?</span></h6>",
             textStyle: ''
         },
         {
@@ -255,7 +255,7 @@ $(document).ready(function() {
                     style: 'font-weight: bold; color: #0077b6; left: 315px; top: 385px;'
                 },
             ],
-            text: "<h4>Is<img class='b-symbol-q' src='/static/images/beta.png' alt='Beta Symbol'><span>≤</span><img class='a-symbol-q' src='/static/images/alpha.png' alt='Alpha Symbol'><span>?</span></h4><div style='margin-top: -10px;'><h6 class='yes'>Yes! <span class='prune-word'>Prune</span></h6></div>",
+            text: "<h6>Is<img class='b-symbol-q' src='/static/images/beta.png' alt='Beta Symbol'><span>≤</span><img class='a-symbol-q' src='/static/images/alpha.png' alt='Alpha Symbol'><span>?</span></h6><div style='margin-top: -10px;'><h6 class='yes if-prune'>Yes! <span class='prune-word if-prune'>Prune</span></h6></div>",
             textStyle: ''
         },
         {
@@ -477,7 +477,7 @@ $(document).ready(function() {
                     style: 'font-weight: bold; color: #0077b6; left: 610px; top: 180px;'
                 },
             ],
-            text: "<h4>Is<img class='b-symbol-q' src='/static/images/beta.png' alt='Beta Symbol'><span>≤</span><img class='a-symbol-q' src='/static/images/alpha.png' alt='Alpha Symbol'><span>?</span></h4>",
+            text: "<h6>Is<img class='b-symbol-q' src='/static/images/beta.png' alt='Beta Symbol'><span>≤</span><img class='a-symbol-q' src='/static/images/alpha.png' alt='Alpha Symbol'><span>?</span></h6>",
             textStyle: ''
         },
         {
@@ -555,7 +555,7 @@ $(document).ready(function() {
                     style: 'font-weight: bold; color: #0077b6; left: 610px; top: 180px;'
                 },
             ],
-            text: "<h4>Is<img class='b-symbol-q' src='/static/images/beta.png' alt='Beta Symbol'><span>≤</span><img class='a-symbol-q' src='/static/images/alpha.png' alt='Alpha Symbol'><span>?</span></h4><div style='margin-top: -10px;'><h6 class='yes'>Yes! <span class='prune-word'>Prune</span></h6></div>",
+            text: "<h6>Is<img class='b-symbol-q' src='/static/images/beta.png' alt='Beta Symbol'><span>≤</span><img class='a-symbol-q' src='/static/images/alpha.png' alt='Alpha Symbol'><span>?</span></h6><div style='margin-top: -10px;'><h6 class='yes if-prune'>Yes! <span class='prune-word if-prune'>Prune</span></h6></div>",
             textStyle: ''
         },
     ];

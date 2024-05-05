@@ -230,7 +230,7 @@ $(document).ready(function() {
         saveQuizSession2()
         setTimeout(function() {
             $('#restart-2').css('display', 'inline');
-        }, 2000)
+        }, 1000)
     })
 
     var isOverSpecifiedElement;

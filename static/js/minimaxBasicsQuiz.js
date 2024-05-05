@@ -94,9 +94,11 @@ $(document).ready(function() {
     function showResults() {
         setTimeout(function() {
             $('#basic-results').html('<h6>You Scored ' + score + '%</h6>');
-            $('#next-container').css('display', 'block');
             $('.basics-quiz-container').css('box-shadow', '0px 0px 10px #76c893');
             $('#basic-results').css('color', '#76c893')
+            setTimeout(function() {
+                $('#next-container').css('display', 'block');
+            }, 1000);
         }, 2000);
         saveQuizSession1()
     }

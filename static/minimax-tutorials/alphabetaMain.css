@@ -1,14 +1,15 @@
 .alphabeta-main-container {
     width: 61.4%;
-    max-width: 964px;
-    min-width: 964px;
+    max-width: 955px;
+    min-width: 955px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 17px;
     margin-bottom: 20px;
     border-radius: 15px;
     box-shadow: 0px 0px 10px black;
     animation-duration: 1s;
     animation-name: border-fade;
+    margin-top: -5px;
 }
 
 @keyframes border-fade {
@@ -29,7 +30,7 @@
 }
 
 .next-icon {
-    margin-top: 5px;
+    margin-top: -35px;
 }
 
 .next-icon:hover {
@@ -37,10 +38,10 @@
 }
 
 .icon-description {
-    padding-top: 4px;
     color: #0077b6;
     font-size: 10px;
     font-weight: bold;
+    margin-top: -10px;
     margin-bottom: -10px;
 }
 
@@ -224,24 +225,26 @@
 
 .symbol-description {
     display: inline;
-    font-size: 12px;
+    font-size: 9px;
 }
 
 .description {
     padding-top: 15px;
+    font-size: 9px;
 }
 
 .alpha-beta-info {
-    font-size: 11px;
+    font-size: 9px;
     color: grey;
 }
 
 .minimax-code {
-    font-size: 9.75px;
+    font-size: 8.5px;
     position: absolute;
     z-index: 1;
     margin-top: -17px;
     color: grey;
+    margin-left: 4px;
 }
 
 .highlighted-code {
@@ -249,8 +252,8 @@
 }
 
 .right-side {
-    margin-left: 58%;
-    margin-top: -130px;
+    margin-left: 63%;
+    margin-top: -107px;
     margin-bottom: -170px;
     position: relative;
 }
@@ -279,15 +282,16 @@
 #restart {
     width: 28px;
     display: none;
-    margin-top: -20px;
+    margin-top: -43px;
+    margin-left: -4px;
 }
 
 .custom-code-border {
   position: relative;
-  width: 318px;
-  height: 290px;
-  margin-left: 82px;
-  margin-top: 32px;
+  width: 278px;
+  height: 262px;
+  margin-left: 75px;
+  margin-top: 13px;
 }
 
 .custom-code-border::before {
@@ -352,7 +356,7 @@
 }
 
 .a-symbol-q, .b-symbol-q {
-    width: 23.5px;
+    width: 18px;
     margin-bottom: 3px;
 }
 
@@ -363,7 +367,7 @@
 
 .minimax-tree-html {
     position: relative;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .alpha-beta-page-info {
@@ -375,9 +379,13 @@
 
 #description-container {
     width: 250px;
-    font-size: 13px;
+    font-size: 10px;
     margin-top: 24px;
     font-weight: bold;
+}
+
+.if-prune {
+	font-size: 11px;
 }
 
 .yes {

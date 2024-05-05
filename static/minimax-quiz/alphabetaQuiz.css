@@ -3,12 +3,13 @@
     max-width: 964px;
     min-width: 964px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 17px;
     margin-bottom: 20px;
     border-radius: 15px;
     box-shadow: 0px 0px 10px black;
     animation-duration: 1s;
     animation-name: border-fade;
+    margin-top: -5px;
 }
 
 @keyframes border-fade {
@@ -247,15 +248,16 @@
 }
 
 .minimax-code {
-    font-size: 9.75px;
+    font-size: 8.5px;
     position: absolute;
     z-index: 1;
-    margin-top: -18px;
+    margin-top: -10px;
     color: grey;
+    margin-left: 4px;
 }
 
 .right-side {
-    margin-left: 58%;
+    margin-left: 63%;
     margin-top: -165px;
     margin-bottom: -170px;
     position: relative;
@@ -263,10 +265,10 @@
 
 .custom-code-border {
   position: relative;
-  width: 318px;
-  height: 290px;
-  margin-left: 82px;
-  margin-top: 5px;
+  width: 278px;
+  height: 262px;
+  margin-left: 75px;
+  margin-top: 13px;
 }
 
 .custom-code-border::before {
@@ -300,15 +302,16 @@
 
 .symbol-description {
     display: inline;
-    font-size: 12px;
+    font-size: 9px;
 }
 
 .description {
     padding-top: 15px;
+    font-size: 9px;
 }
 
 .alpha-beta-info {
-    font-size: 11px;
+    font-size: 9px;
     color: grey;
 }
 
@@ -534,7 +537,7 @@ input[type="text"]:focus {
 
 .hint-text {
     width: 250px;
-    font-size: 13px;
+    font-size: 10px;
     margin-top: 24px;
     font-weight: bold;
 }
@@ -584,4 +587,10 @@ input[type="text"]:focus {
     width: 28px;
     display: none;
     margin-top: 15px;
+}
+
+#resultsText h6 {
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
 }

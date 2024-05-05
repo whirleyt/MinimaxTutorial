@@ -5,6 +5,8 @@ body {
 .navbar {
     border-color: #76c893;
     box-shadow: 0px 8px 16px #76c893;
+    min-width: 200px;
+    height: 30px;
 }
 
 .navbar-collapse {
@@ -29,7 +31,7 @@ body {
 
 .custom-nav-link {
     color: grey;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
     text-decoration: none;
     padding: 2px 20px 2px 20px;
@@ -55,9 +57,9 @@ body {
 }
 
 .title {
-    font-size: 36px;
+    font-size: 28px;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
     animation-duration: 1s;
     animation-name: fading;
     padding-bottom: -5px;
@@ -87,5 +89,5 @@ p {
 }
 
 .subtitle {
-    font-size: 17px;
+    font-size: 13px;
 }
