@@ -243,13 +243,11 @@ $(document).ready(function() {
         start: function(event, ui) {
             $(this).addClass('dragging');
             var clone = $(this).clone().appendTo('body');
-            var x= event.clientX;
-            var y= event.clientY;
         },
         stop: function(event, ui) {
             $(this).removeClass('dragging');
         },
-        distance: 15
+        distance: 30
     });
 
     for (let i = 1; i <= 7; i++) {
@@ -294,42 +292,6 @@ $(document).ready(function() {
            $('#incorrect-update-2').addClass('show-animation');
         }
     }
-
-	let iconPosition = { x: 0, y: 0 };
-
-	element.on('touchmove', function(event) {
-    event.preventDefault();
-    let touch = event.originalEvent.changedTouches[0];
-    iconPosition = {
-        x: touch.clientX,
-        y: touch.clientY
-    };
-	});
-
-	element.on('touchend', function(event) {
-    event.preventDefault();
-
-    for (let i = 1; i <= 7; i++) {
-        let target = $('.tri-val-' + i);
-        if (isOverlapping(iconPosition, target)) {
-            dropTriangle(i);
-            return;
-        }
-    }
-
-    for (let i = 1; i <= 8; i++) {
-        let target = $('.term-val-' + i);
-        if (isOverlapping(iconPosition, target)) {
-            dropTerminal(i);
-            return;
-        }
-    }
-	});
-
-	function isOverlapping(point, element) {
-        let rect = element[0].getBoundingClientRect();
-        return point.x >= rect.left && point.x <= rect.right && point.y >= rect.top && point.y <= rect.bottom;
-	}
 
     function saveQuizSession2() {
         postData = {
