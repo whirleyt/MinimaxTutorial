@@ -242,34 +242,21 @@ $(document).ready(function() {
         start: function(event, ui) {
             $(this).addClass('dragging');
             var clone = $(this).clone().appendTo('body');
+            var x= event.clientX;
+            var y= event.clientY;
         },
         stop: function(event, ui) {
             $(this).removeClass('dragging');
         },
-        distance: 1
-    });
-
-	var offsetX, offsetY;
-
-    $(document).on('touchmove', function(event) {
-        event.preventDefault();
-        var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
-        if (offsetX !== undefined && offsetY !== undefined) {
-            $('.dragging').css({
-                    top: touch.clientY - $('.dragging').height() / 2,
-                    left: touch.clientX - $('.dragging').width() / 2
-                });
-        }
+        distance: 5
     });
 
     for (let i = 1; i <= 7; i++) {
-        $('.tri-val-' + i).droppable({
+        let element= $('.tri-val-' + i);
+        element.droppable({
             hoverClass: "drag-hover",
             accept: ".prune-icon",
             drop: function(event, ui) {
-                dropTriangle(i);
-            },
-            touchstart: function(event) {
                 dropTriangle(i);
             }
         })
@@ -284,13 +271,11 @@ $(document).ready(function() {
 	}
 
     for (let i = 1; i <= 8; i++) {
-        $('.term-val-' + i).droppable({
+        let element= $('.term-val-' + i);
+        element.droppable({
             hoverClass: "drag-hover",
             accept: ".prune-icon",
             drop: function(event, ui) {
-                dropTerminal(i);
-            },
-            touchstart: function(event) {
                 dropTerminal(i);
             }
         })
@@ -309,13 +294,20 @@ $(document).ready(function() {
         }
     }
 
-    $(".prune-icon").on('touchstart', function(event) {
-        var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
-        var draggable = $(this);
-        var offset = draggable.offset();
-        offsetX = touch.clientX - offset.left;
-        offsetY = touch.clientY - offset.top;
-    });
+     element.on('touchstart', function(event) {
+            event.preventDefault();
+        });
+
+        element.on('touchend', function(event) {
+            event.preventDefault();
+            var target = document.elementFromPoint(x, y);
+            if ($(target).hasClass('tri-val-' + i)) {
+                dropTriangle(i);
+            }
+            if ($(target).hasClass('term-val-' + i)) {
+                dropTerminal(i);
+            }
+        });
 
     function saveQuizSession2() {
         postData = {
