@@ -1,7 +1,7 @@
 name: Build and deploy Python app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: Minimax Tutorial 
+  AZURE_WEBAPP_NAME: MinimaxTutorial 
   PYTHON_VERSION: '3.8'             
 
 on:
