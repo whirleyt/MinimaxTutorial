@@ -219,7 +219,7 @@ $(document).ready(function() {
 
     function displayResults() {
         setTimeout(function() {
-            $('.see-your-results').css('display', 'inline');
+            $('.see-your-results').css('display', 'inline-block');
         }, 2000)
     }
 

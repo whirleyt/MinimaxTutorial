@@ -30,10 +30,8 @@
 }
 
 .next-icon {
-	z-index: 9999;
 	position: absolute;
 	left: -15px;
-	top: -40px;
 }
 
 .next-icon:hover {
@@ -41,13 +39,24 @@
     cursor: pointer;
 }
 
+.see-your-results {
+	position: relative;
+    display: none;
+}
+
 .icon-description {
-    margin-top: 25px;
+	position: absolute;
     color: #0077b6;
     font-size: 10px;
     font-weight: bold;
-    margin-bottom: -10px;
-    margin-left: 5px;
+    text-align: center;
+    width: 200px;
+    left: -100px;
+    top: 40px;
+}
+
+.space-btwn {
+	padding-bottom: 30px;
 }
 
 .triangle-container {
@@ -221,6 +230,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #76c893;
+    padding-bottom: -40px;
 }
 
 .minimax-value {
@@ -561,11 +571,6 @@ input[type="text"]:focus {
     font-weight: bold;
 }
 
-.see-your-results {
-	position: relative;
-    display: none;
-}
-
 .resultsText {
     margin-bottom: -15px;
 }
@@ -606,12 +611,13 @@ input[type="text"]:focus {
 #restart-2 {
     width: 28px;
     display: none;
-    margin-top: 15px;
-    margin-bottom: -14px;
+    margin-top: 30px;
+    margin-bottom: -50px;
 }
 
 #resultsText h6 {
     padding-top: 10px;
     font-size: 14px;
     font-weight: bold;
+    margin-bottom: -30px;
 }
