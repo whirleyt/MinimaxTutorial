@@ -1,3 +1,10 @@
+.navbar {
+    border-color: #76c893;
+    box-shadow: 0px 8px 16px #76c893;
+    min-width: 776px;
+    height: 38px;
+}
+
 .alphabeta-main-container {
     width: 61.4%;
     max-width: 955px;
