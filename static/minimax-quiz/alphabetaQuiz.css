@@ -502,7 +502,6 @@ input[type="text"]:focus {
 
 .prune-hint-section {
 	position: relative;
-	overflow: auto;
 }
 
 .hint-icon {
