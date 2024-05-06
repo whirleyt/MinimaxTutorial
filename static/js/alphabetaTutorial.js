@@ -111,7 +111,7 @@ $(document).ready(function() {
                     style: 'left: 232px; top: 180px;'
                 },
             ],
-            text: "<div><p>The alpha-beta values that are passed down are -∞ and ∞. 10, the value of the min node, gets passed down as the lowest value seen so far. </p></div>",
+            text: "<div><p>The alpha and beta values that are passed down are -∞ and ∞. 10, the value of the min node, gets passed down as the lowest value seen so far. </p></div>",
             textStyle: ''
         },
         {
@@ -321,7 +321,7 @@ $(document).ready(function() {
                     style: 'left: 420px; top: 340px;'
                 },
             ],
-            text: "<div><p>10 seen by the Min Node is the highest value seen so far, so alpha is updated and the value gets passed down.</p></div>",
+            text: "<div><p>10 seen by the max node is the highest value seen so far, so alpha is updated and the value gets passed down.</p></div>",
             textStyle: ''
         },
         {
